@@ -1,0 +1,11 @@
+version: '3.6'
+services:
+  php-apache-env:
+    container_name: form-data-in-php
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    volumes: 
+      - ./php:/var/www/html
+    ports: 
+      - 8000:80
